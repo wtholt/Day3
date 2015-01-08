@@ -1,4 +1,4 @@
-number = 50 #rand(0..101)
+number = rand(0..101)
 
 
 guesses = 0
@@ -25,7 +25,6 @@ while @game_on
 	puts "Please guess a number between 1 and 100: "
 	guess = gets.chomp.to_i
 	game(number, guess, guesses)
-	p @game_on
 	guesses += 1
 end 
 
