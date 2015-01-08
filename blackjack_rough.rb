@@ -27,19 +27,7 @@ def dealer cards, dealer_hand
 		puts "Dealer hits"
 		hit_dealer_hand = dealer_hand.push(cards.shuffle.pop(1))
 		hit_dealer_hand = hit_dealer_hand.flatten
-		if hit_dealer_hand > 21
-			puts "Dealer busts"
-			@game_on = false
-		elsif hit_dealer_hand <= 17
-			puts "Dealer hits again"
-			again_hit_dealer_hand = again_hit_dealer_hand.flatten
-			again_hit_dealer_hand = hit_dealer_hand.push(cards.shuffle.pop(1))
-			if again_hit_dealer_hand > 21
-				puts "Dealer busts"
-				@game_on = false
-			end
-		end
-
+		
 	elsif dealer_hand.inject(:+) == 21
 		puts "Dealer wins!"
 		puts "Dealer hand - #{dealer_hand}"
