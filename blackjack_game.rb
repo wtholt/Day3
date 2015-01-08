@@ -27,6 +27,7 @@ def dealer cards, dealer_hand
 		puts "Dealer hits"
 		hit_dealer_hand = dealer_hand.push(cards.shuffle.pop(1))
 		hit_dealer_hand = hit_dealer_hand.flatten
+		puts hit_dealer_hand
 		
 	elsif dealer_hand.inject(:+) == 21
 		puts "Dealer wins!"
